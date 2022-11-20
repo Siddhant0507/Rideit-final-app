@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     container: {
     },
     mapScreen:{
-      height:height*3/4,
+      height:height/2,
       width:width,
       backgroundColor:"gray",
     },

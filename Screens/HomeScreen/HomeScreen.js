@@ -1,13 +1,20 @@
 import { Button, StyleSheet, Text, View ,SafeAreaView,TouchableOpacity} from 'react-native'
 import React from 'react';
-import styles from './styles'
+import styles from './styles';
+import AutoComplete from '../../Components/AutoComplete';
+import Map from '../../Components/Map';
+
 
 const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView>
+      <View style={styles.mapScreen}>
+        <AutoComplete/>
+        <Map/>
+      </View>
+
       
-      
-      <View style={styles.mapScreen}></View>
+
       <TouchableOpacity style={styles.buttons} onPress={()=>navigation.navigate('PickupDandT')}>
       <Text style={styles.buttonText}>Book a Ride </Text>
       </TouchableOpacity>
