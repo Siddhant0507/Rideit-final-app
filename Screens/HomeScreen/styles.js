@@ -32,6 +32,10 @@ const styles = StyleSheet.create({
       marginHorizontal: 20,
       marginVertical: 10,
       borderRadius: 15,
+    },
+    logo:{
+      height:150,
+      width:150,
     }
 
 })

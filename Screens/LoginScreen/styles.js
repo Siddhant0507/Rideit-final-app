@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: 'rgba(123,104,238,0.8)',
-    height: 55,
+    height: 45,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 15,
@@ -23,19 +23,19 @@ const styles = StyleSheet.create({
     borderColor: 'white'
   },
   buttonText: {
-    fontSize: 20,
+    fontSize: 18,
     color: 'white',
     letterSpacing: 0.5
   },
   headingText:{
-    fontSize:32,
+    fontSize:25,
     fontWeight:"600",
     marginHorizontal:15,
     
   },
   subHeadingText:{
     marginVertical:10,
-    fontSize:20,
+    fontSize:16,
     fontWeight:"400",
     marginHorizontal:15,
   },
