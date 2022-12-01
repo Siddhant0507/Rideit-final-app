@@ -25,8 +25,9 @@ const HomeScreen = ({navigation}) => {
          <TouchableOpacity style={styles.menuButton} onPress={()=>navigation.openDrawer()}>
       <Text><IonIcons name='menu'  size={35}  color={'white'}/> </Text>
       </TouchableOpacity>
-      </View>
 
+            <AutoComplete/>   
+      </View>
       
     <View style={styles.bottomContainer}>
       <TouchableOpacity style={styles.buttons} onPress={()=>navigation.navigate('PickupDandT')}>

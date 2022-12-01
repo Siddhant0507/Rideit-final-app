@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import {GOOGLE_MAPS_APIKEY} from '@env'
-import { block } from 'react-native-reanimated';
+// import { block } from 'react-native-reanimated';
 // import { ScrollView } from 'react-native-gesture-handler';
 
 const AutoComplete = () => {
