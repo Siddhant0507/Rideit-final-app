@@ -10,6 +10,8 @@ import CustomDrawer from "../Components/CustomDrawer";
 import IonIcons from "react-native-vector-icons/Ionicons";
 import PickupDandT from "../Screens/PickupDandT/PDateAndTime";
 import DropDandT from "../Screens/DropDandT/DropDandT";
+import RideConfirmScreen from "../Screens/RideConfirmScreen/RideConfirmScreen";
+
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -20,6 +22,7 @@ const MainStack=()=>{
     <Stack.Screen name="Home2" component={AppStack} options={{headerShown:false}} />
     <Stack.Screen name="PickupDandT" component={PickupDandT} />
     <Stack.Screen name="DropDandT" component={DropDandT} />
+    <Stack.Screen name="RideConfirm" component={RideConfirmScreen} />
   </Stack.Navigator>
 
 

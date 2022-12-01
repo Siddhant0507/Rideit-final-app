@@ -3,10 +3,12 @@ import React from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import {GOOGLE_MAPS_APIKEY} from '@env'
 import { block } from 'react-native-reanimated';
+// import { ScrollView } from 'react-native-gesture-handler';
 
 const AutoComplete = () => {
   return (
     <View>
+      
         <GooglePlacesAutocomplete
          nearbyPlacesAPI='GooglePlacesSearch'
          debounce={400}
@@ -20,7 +22,7 @@ const AutoComplete = () => {
                 fontSize:18,
             }
         }}
-        enablePoweredByContainer={false}
+        // enablePoweredByContainer={false}
         minLength={2}
         query={{
         key:GOOGLE_MAPS_APIKEY,
@@ -33,6 +35,7 @@ const AutoComplete = () => {
         returnKeyType={"Search"}
     />
      
+ 
     </View>
   )
 }

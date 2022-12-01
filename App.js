@@ -4,6 +4,8 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+
+
 import { Provider } from "react-redux";
 
 import AuthStack from "./Navigation/AuthStack";
@@ -11,15 +13,15 @@ import AppStack from "./Navigation/AppStack";
 
 import { store } from "./store";
 
+
+
 export default function App() {
   return (
     <Provider store={store}>
-      <GestureHandlerRootView style={{ flex: 1 }}>
         <NavigationContainer>
-          <AuthStack />
-          {/* <AppStack/> */}
+          {/* <AuthStack /> */}
+          <AppStack/>
         </NavigationContainer>
-      </GestureHandlerRootView>
     </Provider>
   );
 }

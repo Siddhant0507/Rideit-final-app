@@ -1,41 +1,53 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react';
-import MapView,{Marker} from 'react-native-maps';
+import React, { useState } from "react";
+import MapView, { Callout, Circle, Marker } from "react-native-maps";
+import { StyleSheet, View, Text } from "react-native";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
-const Map = () => {
+export default function Map() {
+  const [pin, setPin] = useState({ latitude: 37.78825, longitude: -122.4324 });
+
   return (
-    <View>
+    <View style={{flex: 1, backgroundColor:'purple'}}>
       <MapView
-      style={{flex:1, height:200,margin:20}}
-      mapType="mutedStandard"
-    initialRegion={{
-      latitude: 37.78825,
-      longitude: -122.4324,
-      latitudeDelta: 0.005,
-      longitudeDelta: 0.005,
-    }}
-  > 
-  
-  <Marker
-  coordinate={{
-    latitude: 37.78825,
-    longitude: -122.4324 }}
-    title="Origin"
-    description='this is Your current Location'
-    identifier='Origin' 
-  />
-  </MapView>
+        style={styles.map}
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
+        }}
+      >
+        <Marker
+          coordinate={pin}
+          pinColor="red"
+          draggable={true}
+          onDragStart={(e) => {
+            console.log("drag start", e.nativeEvent.coordinate);
+          }}
+          onDragEnd={(e) => {
+            setPin({
+              latitude: e.nativeEvent.coordinate.latitude,
+              longitude: e.nativeEvent.coordinate.longitude,
+            });
+          }}
+        >
+          <Callout>
+            <Text>I am here</Text>
+          </Callout>
+        </Marker>
+        <Circle center={pin} radius={1000}></Circle>
+      </MapView>
     </View>
-  )
+  );
 }
 
-export default Map
-
 const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    height:700,
-    width:500
-
-  }
-})
+  container: {
+    backgroundColor: "#fff",
+    flex: 1,
+  },
+  map: {
+    width: "100%",
+    height: "100%",
+  },
+});
