@@ -3,7 +3,7 @@ import React ,{useState} from 'react';
 import styles from './styles';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-const DropDandT = ({navigation}) => {
+const DropDandT = ({navigation,route}) => {
     const [date , setDate] = useState(new Date());
     const [mode , setMode] = useState('date');
     const [show , setShow] = useState(false);
@@ -39,8 +39,8 @@ const DropDandT = ({navigation}) => {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.nextButton}>
-          <Text style={styles.buttonText}> Next </Text>
+      <TouchableOpacity style={styles.nextButton} onPress={()=>navigation.navigate('RideDetailScreen',{rideItem:route.params.rideItem,pickDate:route.params.pickDate,dropDate:date})}>  
+              <Text style={styles.buttonText}> Next </Text>
         </TouchableOpacity>
        
 
