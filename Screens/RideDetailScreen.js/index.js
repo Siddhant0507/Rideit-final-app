@@ -62,10 +62,10 @@ const RideDetailScreen = ({ navigation, route }) => {
             <Text>{route.params.rideItem.km_driven} kms driven</Text>
           </View>
           <Text style={{ backgroundColor: '#f0f4ff', color: '#777cb9', fontWeight: '700', paddingTop: 10, paddingBottom: 10, borderRadius: 5, marginLeft: 18, marginRight: 18, marginTop: '4%', textAlign: 'center' }}>Free Cancellation up to 24 October 2022,2:00 AM</Text>
-          <TouchableHighlight onPress={() => { }}>
+          <TouchableHighlight onPress={() =>{}}>
             <Text style={{ backgroundColor: '#0ca30e', color: 'white', fontWeight: '500', paddingTop: 10, paddingBottom: 10, borderRadius: 5, marginLeft: 18, marginRight: 18, marginTop: '10%', textAlign: 'center' }}>PROCEED TO PAY ₹ {Math.round(route.params.rideItem.price * hours)}</Text>
           </TouchableHighlight>
-        </View>
+        </View>;
       </ScrollView>
     </View>
   )

@@ -3,8 +3,12 @@ const {width, height} = Dimensions.get('window');
 
 
 const styles = StyleSheet.create({
+    mapview:{
+      height:'70%',
+      width:'100%'
+    },
     container:{
-      marginTop:500,
+      marginTop:20,
       marginHorizontal:20,
       justifyContent:'center'
     },

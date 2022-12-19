@@ -2,7 +2,7 @@ import { StyleSheet, Text, View , TextInput, TouchableOpacity, Alert} from 'reac
 import React ,{useState, useRef} from 'react';
 import styles from './styles';
 import { FirebaseRecaptchaVerifierModal} from 'expo-firebase-recaptcha';
-import firebaseConfig from '../../firebaseConfig';
+import firebaseConfig from "./../../FirebaseConfig"
 import firebase from 'firebase/compat/app';
 
 const LoginScreen = ({navigation}) => {

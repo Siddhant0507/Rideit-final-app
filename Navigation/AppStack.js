@@ -13,6 +13,7 @@ import DropDandT from "../Screens/DropDandT/DropDandT";
 import RideConfirmScreen from "../Screens/RideConfirmScreen/RideConfirmScreen";
 import RideListScreen from "../Screens/RideListScreen";
 import RideDetailScreen from "../Screens/RideDetailScreen.js";
+import PaymentScreen from "../Screens/PaymentScreen/PaymentScreen";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -26,6 +27,8 @@ const MainStack=()=>{
     <Stack.Screen name="RideConfirm" component={RideConfirmScreen} />
     <Stack.Screen name="RideListScreen" component={RideListScreen}/>
     <Stack.Screen name="RideDetailScreen" component={RideDetailScreen}/>
+    <Stack.Screen name="PaymentScreen" component={PaymentScreen}/>
+    
   </Stack.Navigator>
 
 

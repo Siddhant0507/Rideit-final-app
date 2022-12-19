@@ -2,6 +2,7 @@ import { Platform, Text, View , SafeAreaView, TouchableOpacity} from 'react-nati
 import React ,{useState} from 'react';
 import styles from './styles';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import Map from '../../Components/Map';
 
 const DropDandT = ({navigation,route}) => {
     const [date , setDate] = useState(new Date());
@@ -28,6 +29,10 @@ const DropDandT = ({navigation,route}) => {
         setMode(currentMode)
     }
   return (
+    <View>
+      <View style={styles.mapview}>
+        <Map/>
+      </View>
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>{text}</Text>
       <View  style={styles.buttonContainer}>
@@ -58,6 +63,7 @@ const DropDandT = ({navigation,route}) => {
 
 
     </SafeAreaView>
+    </View>
   )
 }
 

@@ -2,7 +2,7 @@ import { StyleSheet, Text, View ,TextInput,TouchableOpacity} from 'react-native'
 import React ,{useState} from 'react';
 import styles from './styles';
 import { ref, set } from "firebase/database";
-import { db } from './../../firebaseConfig';
+import { db } from "./../../FirebaseConfig"
 import { firestore } from '@react-native-firebase/firestore';
 
 
