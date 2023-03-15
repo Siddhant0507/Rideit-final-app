@@ -24,8 +24,8 @@ export default function App() {
   >
     <Provider store={store}>
         <NavigationContainer>
-          {/* <AuthStack /> */}
-          <AppStack/>
+          <AuthStack />
+          {/* <AppStack/> */}
         </NavigationContainer>
     </Provider>
     </StripeProvider>
